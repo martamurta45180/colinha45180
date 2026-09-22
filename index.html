@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colinha de votação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="pagina">
+  <header class="topo">
+  <p class="cargo-candidata">DEPUTADA ESTADUAL</p>
+  <h1>MARTA MURTA</h1>
+  <div class="numero-candidato">45180</div>
+ </header>
+
+    <!-- Este bloco vira a imagem final -->
+    <section class="cartao" id="colinha-card">
+      <h2>Colinha 2026</h2>
+      <div id="cargos"><p class="dica">Carregando candidatos...</p></div>
+      <p class="aviso">Confira sempre o número do candidato na urna.</p>
+    </section>
+
+    <div class="botoes">
+      <button type="button" id="btn-limpar" class="btn btn-secundario">Limpar</button>
+      <button type="button" id="btn-salvar" class="btn">Salvar imagem</button>
+    </div>
+  </main>
+
+  <!-- Bibliotecas: leitor de CSV e gerador de imagem -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <!-- Ordem importa: config primeiro, lógica depois -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
