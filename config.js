@@ -27,9 +27,9 @@ const FOTOS_PATH = "fotos";
 //  fixo    -> (opcional) número já preenchido
 //  travado -> (opcional) true = o usuário não consegue editar
 const CARGOS = [
-  { id: "federal",    label: "Deputado federal",  codigo: "6", digitos: 4 },
+  { id: "federal",    label: "Deputado federal",  codigo: "6", digitos: 4, fixo: "2275", travado: true},
   { id: "estadual",   label: "Deputado estadual", codigo: "7", digitos: 5, fixo: "45180", travado: true },
-  { id: "senador1",   label: "Senador (1º voto)", codigo: "5", digitos: 3 },
+  { id: "senador1",   label: "Senador (1º voto)", codigo: "5", digitos: 3, fixo: "456", travado:true },
   { id: "senador2",   label: "Senador (2º voto)", codigo: "5", digitos: 3 },
   { id: "governador", label: "Governador",        codigo: "3", digitos: 2 },
   { id: "presidente", label: "Presidente",        codigo: "1", digitos: 2 },
