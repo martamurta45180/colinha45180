@@ -54,11 +54,15 @@ async function carregarArquivo(entrada) {
     const sq = String(linha.SQ_CANDIDATO || "").trim();
 
     if (!INDEX[cargo]) INDEX[cargo] = {};
-    INDEX[cargo][numero] = {
-      nome: linha.NM_URNA_CANDIDATO || linha.NM_CANDIDATO || "",
-      partido: linha.SG_PARTIDO || "",
-      foto: `${FOTOS_PATH}/fcand2026${uf}/F${uf}${sq}_div.jpg`,
-    };
+    
+    // CORREÇÃO: Apenas salva o candidato se ainda não existir alguém com esse número no INDEX
+    if (!INDEX[cargo][numero]) {
+      INDEX[cargo][numero] = {
+        nome: linha.NM_URNA_CANDIDATO || linha.NM_CANDIDATO || "",
+        partido: linha.SG_PARTIDO || "",
+        foto: `${FOTOS_PATH}/fcand2026${uf}/F${uf}${sq}_div.jpg`,
+      };
+    }
   });
 }
 
